@@ -1,0 +1,56 @@
+/*---------------------------------------------------------------------------*\
+  GENERIC LAYOUT CLASSES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Used to modify an elements bottom margin.
+ * The various size modifiers follow the site's vertical rhythm. 
+ */
+.spaced-xs {
+    margin-bottom: $g-rhythm;
+}
+
+.spaced-sm {
+    margin-bottom: $g-rhythm*2;
+}
+
+.spaced-md {
+    margin-bottom: $g-rhythm*3;
+}
+
+.spaced-lg {
+    margin-bottom: $g-rhythm*4;
+}
+
+.spaced-xl {
+    margin-bottom: $g-rhythm*5;
+}
+
+
+
+/**
+ * Used to add spacing to the inside of an element via padding.
+ * This padding follows the site's vertical rhythm.
+ */
+.padded-xs {
+    padding-top: $g-rhythm;
+}
+
+.padded-sm {
+    padding-top: $g-rhythm*2;
+}
+
+.padded-md {
+    padding-top: $g-rhythm*3;
+}
+
+.padded-lg {
+    padding-top: $g-rhythm*4;
+}
+
+.padded-xl {
+    padding-top: $g-rhythm*5;
+}
+
+
+
