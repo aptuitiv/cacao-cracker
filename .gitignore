@@ -7,3 +7,4 @@ dist
 .ftppass
 *~
 *.swp
+*.test.html
