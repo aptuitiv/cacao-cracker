@@ -17,12 +17,11 @@
  * Base header padding
  */
 $header-padding-top: 10px !default;
-$header-padding-bottom: 5px !default;
 
 /**
  * Bottom margin of the header logo section
  */
-$header-logo-margin: 10px !default;
+$header-logo-margin: 15px !default;
 
 
 
@@ -33,12 +32,25 @@ $header-logo-margin: 10px !default;
 \*---------------------------------------------------------------------------*/
 
 .header {
+    position: relative;
     padding-top: $header-padding-top;
-    padding-bottom: $header-padding-bottom;
 }
 
 .header_logo {
     margin-bottom: $header-logo-margin;
+}
+
+
+
+.header_nav {
+}
+
+.header_nav.-inline {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 

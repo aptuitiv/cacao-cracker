@@ -110,8 +110,7 @@ $grid-breakpoints: (
  * Header
  */
 $header-padding-top: $g-rhythm;
-$header-padding-bottom: $g-rhythm/2;
-$header-logo-margin: $g-rhythm;
+$header-logo-margin: $g-rhythm + $g-rhythm/2;
 
 
 
