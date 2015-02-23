@@ -52,6 +52,8 @@ $g-bp-xs: 400px;
 
 
 
+
+
 /*---------------------------------------------------------------------------*\
   LOCAL VARIABLES
 \*---------------------------------------------------------------------------*/
@@ -75,9 +77,16 @@ $page-gutter: $g-rhythm*2;
 \*---------------------------------------------------------------------------*/
 
 /**
- * Main navigation & Drilldown menu
+ * Main navigation
  */
-$ddmenu-root-display: inline-block;
+$mainnav-root-display: inline-block;
+
+
+
+/**
+ * Drilldown menu
+ */
+$ddmenu-classname: "mainnav";
 
 
 
@@ -118,6 +127,7 @@ $grid-breakpoints: (
  */
 $header-padding-top: $g-rhythm;
 $header-logo-margin: $g-rhythm + $g-rhythm/2;
+$header-gutter: $page-gutter;
 
 
 

@@ -25,6 +25,20 @@ $header-logo-margin: 15px !default;
 
 
 
+/**
+ * Breakpoint to hide navigation
+ */
+$header-nav-bp: $g-bp-md !default;
+
+
+
+/**
+ * Side margins
+ */
+$header-gutter: 15px !default;
+
+
+
 
 
 /*---------------------------------------------------------------------------*\
@@ -37,6 +51,8 @@ $header-logo-margin: 15px !default;
 }
 
 .header_logo {
+    margin-left: $header-gutter;
+    margin-right: $header-gutter;
     margin-bottom: $header-logo-margin;
 }
 
@@ -45,12 +61,41 @@ $header-logo-margin: 15px !default;
 .header_nav {
 }
 
-.header_nav.-inline {
+.header_nav.-inline,
+.header_toggle {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: $header-gutter;
     transform: translateY(-50%);
     z-index: 10;
+}
+
+.header_toggle {
+    display: none;
+    margin-top: $header-padding-top/2;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  STATE
+\*---------------------------------------------------------------------------*/
+
+@media (max-width: $header-nav-bp) {
+    .header_nav,
+    .header_nav.-inline {
+        display: none;
+        position: static;
+        transform: none;
+    }
+    .header_top {
+        position: relative;
+    }
+    .header_toggle {
+        display: block;
+    }
 }
 
 

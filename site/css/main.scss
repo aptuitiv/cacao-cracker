@@ -40,10 +40,14 @@
 @import "../../cacao/modules/media/css/component"; // module/media
 @import "../../cacao/modules/lists/css/component"; // module/lists
 @import "../../cacao/modules/container/css/component"; // module/container
-@import "../../cacao/modules/ddmenu/css/component"; // module/ddmenu
+@import "../../cacao/modules/mainnav/css/component"; // module/ddmenu
 @import "components/content";
 @import "components/sidebar";
 @import "components/header";
+
+
+// needs to be imported after modules/mainnav... maybe a state layer is appropriate
+@import "../../cacao/modules/ddmenu/css/component"; // module/ddmenu
 
 
 
