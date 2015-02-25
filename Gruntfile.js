@@ -105,13 +105,12 @@ module.exports = function(grunt) {
 
 
     // cacao modules
-    require('./cacao/modules/jquery/Gruntfile.js')(grunt);
-    require('./cacao/modules/magnific/Gruntfile.js')(grunt);
-    require('./cacao/modules/normalize/Gruntfile.js')(grunt);
-    require('./cacao/modules/slick/Gruntfile.js')(grunt);
-    require('./cacao/modules/slider/Gruntfile.js')(grunt);
-    require('./cacao/modules/mainnav/Gruntfile.js')(grunt);
-    require('./cacao/modules/ddmenu/Gruntfile.js')(grunt);
+    //require('./bower_components/cacao/modules/jquery/Gruntfile.js')(grunt);
+    //require('./bower_components/cacao/modules/magnific/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/normalize/Gruntfile.js')(grunt);
+    //require('./bower_components/cacao/modules/slick/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/slider/Gruntfile.js')(grunt);
+    //require('./bower_components/cacao/modules/ddmenu/Gruntfile.js')(grunt);
 
 
     // npm tasks
