@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= global.src %>/assets',
-                    src: ['**/*'],
+                    src: ['**/*', '!**/README.md'],
                     dest: '<%= global.dest %>'
                 }]
             }
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                 tasks: ['uglify']
             },
             assets: {
-                files: ['<%= global.src %>/assets/**/*'],
+                files: ['<%= global.src %>/assets/**/*', '!<%= global.src %>/assets/**/README.md'],
                 tasks: ['copy:site', 'htmlmin:dist']
             }
         },
