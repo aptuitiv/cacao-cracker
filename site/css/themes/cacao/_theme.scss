@@ -1,0 +1,22 @@
+/*---------------------------------------------------------------------------*\
+  THEME INDEX
+\*---------------------------------------------------------------------------*/
+
+// theme variables, colorscheme etc...
+@import "settings";
+
+// base element themes
+@import "base/base";
+
+// generic theme classes
+@import "generic/generic";
+
+// components
+@import "components/container";
+@import "components/header";
+@import "components/hero";
+@import "components/logo";
+@import "components/slider";
+
+
+

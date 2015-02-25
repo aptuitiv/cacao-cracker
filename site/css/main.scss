@@ -2,11 +2,14 @@
   MAIN STYLESHEET
 \*---------------------------------------------------------------------------*/
 
+
+
 /**
  * Globals 
  */
 @import "../../bower_components/cacao/cacao"; // cacao globals and mixins
 @import "settings";
+@import "themes/cacao/overrides"; // theme overrides
 
 
 
@@ -62,7 +65,7 @@
 /**
  * Theme
  */
-@import "themes/default";
+@import "themes/cacao/theme";
 
 
 

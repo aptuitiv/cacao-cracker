@@ -1,0 +1,25 @@
+/*---------------------------------------------------------------------------*\
+  SLIDER THEME
+\*---------------------------------------------------------------------------*/
+
+.slider_pager_item {
+    @include box-shadow(0, 0, 6px, 2px, rgba(#000, .8));
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+
+
+.slider_pager_item.current {
+    background: white;
+}
+
+
+
+.slider_pager_item:hover {
+    border-width: 2px;
+    background: none;
+}
+
+
+
