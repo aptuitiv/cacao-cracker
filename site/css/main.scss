@@ -7,9 +7,12 @@
 /**
  * Globals 
  */
-@import "../../bower_components/cacao/cacao"; // cacao globals and mixins
+// cacao globals, defaults, and mixins
+@import "../../bower_components/cacao/cacao";
+// site settings
 @import "settings";
-@import "themes/cacao/overrides"; // theme overrides
+// theme settings and overrides
+@import "themes/cacao/settings";
 
 
 
