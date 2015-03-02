@@ -1,4 +1,8 @@
-// currently can only modify settings that are set in site/css/_settings.scss
+/**
+ * Site setting overrides
+ */
+
+// remove border width from header margin (maintain vertical rhythm)
 $header-logo-margin: $header-logo-margin - $t-header-border-width;
 
 
