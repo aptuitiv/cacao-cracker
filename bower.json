@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "homepage": "http://aptuitiv.github.io/cacao",
   "author": "Aptuitiv",
-  "description": "A scaffolding and build system for using Cacao modules.",
+  "description": "Scaffolding and a build system for using Cacao's modules and framework.",
   "license": "MIT",
   "private": true,
   "main": "site/assets/index.html",
