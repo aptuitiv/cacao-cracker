@@ -3,6 +3,15 @@
 \*---------------------------------------------------------------------------*/
 
 /**
+ * Applied to elements to allow their heights to 'clear' or contain floats.
+ */
+.clearfix {
+    @include clearfix;
+}
+
+
+
+/**
  * Used to modify an elements bottom margin.
  * The various size modifiers follow the site's vertical rhythm. 
  */
