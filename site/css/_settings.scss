@@ -2,7 +2,7 @@
   SETTING OVERRIDES
 \*---------------------------------------------------------------------------*/
 /**
- * Global variables, layout settings, and module settings go here.
+ * Global variables, site settings, and module settings go here.
  */
 
 
@@ -10,7 +10,7 @@
 
 
 /*---------------------------------------------------------------------------*\
-  GLOBAL OVERRIDES
+  CACAO GLOBAL OVERRIDES
 \*---------------------------------------------------------------------------*/
 
 /**
@@ -55,7 +55,7 @@ $g-bp-xs: 400px;
 
 
 /*---------------------------------------------------------------------------*\
-  LOCAL VARIABLES
+  SITE SETTINGS
 \*---------------------------------------------------------------------------*/
 /**
  * Used throughout this file to keep things consistent.
@@ -65,15 +65,15 @@ $g-bp-xs: 400px;
 /**
  * Page variables (used below to configure layouts and modules)
  */
-$page-width: 960px;
-$page-gutter: $g-rhythm*2;
+$site-width: 960px;
+$site-gutter: $g-rhythm*2;
 
 
 
 
 
 /*---------------------------------------------------------------------------*\
-  COMPONENT SETTINGS
+  COMPONENT & MODULE SETTINGS
 \*---------------------------------------------------------------------------*/
 
 /**
@@ -93,15 +93,15 @@ $ddmenu-classname: "mainnav";
 /**
  * Container
  */
-$container-width: $page-width;
-$container-gutter: $page-gutter;
+$container-width: $site-width;
+$container-gutter: $site-gutter;
 
 
 
 /**
  * Content
  */
-$content-gutter: $page-gutter;
+$content-gutter: $site-gutter;
 $content-padding-top: 0;
 $content-padding-bottom: $g-rhythm;
 $content-heading-space: $g-rhythm;
@@ -127,7 +127,7 @@ $grid-breakpoints: (
  */
 $header-padding-top: $g-rhythm;
 $header-logo-margin: $g-rhythm + $g-rhythm/2;
-$header-gutter: $page-gutter;
+$header-gutter: $site-gutter;
 
 
 
@@ -141,7 +141,7 @@ $media-gutter: $g-rhythm*2;
 /**
  * Sidebar
  */
-$sidebar-gutter: $page-gutter;
+$sidebar-gutter: $site-gutter;
 $sidebar-padding-top: $g-rhythm*4;
 $sidebar-padding-bottom: $g-rhythm*2;
 

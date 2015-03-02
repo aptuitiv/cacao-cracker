@@ -23,15 +23,6 @@ $header-padding-top: 10px !default;
  */
 $header-logo-margin: 15px !default;
 
-
-
-/**
- * Breakpoint to hide navigation
- */
-$header-nav-bp: $g-bp-md !default;
-
-
-
 /**
  * Side margins
  */
@@ -42,7 +33,7 @@ $header-gutter: 15px !default;
 
 
 /*---------------------------------------------------------------------------*\
-  LAYOUT
+  COMPONENT
 \*---------------------------------------------------------------------------*/
 
 .header {
@@ -73,29 +64,6 @@ $header-gutter: 15px !default;
 .header_toggle {
     display: none;
     margin-top: $header-padding-top/2;
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  STATE
-\*---------------------------------------------------------------------------*/
-
-@media (max-width: $header-nav-bp) {
-    .header_nav,
-    .header_nav.-inline {
-        display: none;
-        position: static;
-        transform: none;
-    }
-    .header_top {
-        position: relative;
-    }
-    .header_toggle {
-        display: block;
-    }
 }
 
 
