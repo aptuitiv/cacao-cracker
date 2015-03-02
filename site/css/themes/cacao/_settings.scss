@@ -21,10 +21,14 @@ $t-header-border-width: 1px;
 
 
 
-/**
- * Site setting overrides.
- */
-@import "overrides";
+
+
+/*---------------------------------------------------------------------------*\
+  SITE SETTING OVERRIDES
+\*---------------------------------------------------------------------------*/
+
+// remove border width from header margin (maintain vertical rhythm)
+$header-logo-margin: $header-logo-margin - $t-header-border-width;
 
 
 
