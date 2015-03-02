@@ -7,7 +7,11 @@ module.exports = function(grunt) {
             // Project source files 
             src: 'site',
             // Build destination
-            dest: 'dist'
+            dest: 'dist',
+            // bower components directory
+            bower: 'bower_components',
+            // cacao directory
+            cacao: '<%= global.bower %>/cacao'
         },
 
         sass: {
