@@ -54,10 +54,10 @@ $header-gutter: 15px !default;
 
 .header_nav.-inline,
 .header_toggle {
+    @include transform(translateY(-50%));
     position: absolute;
     top: 50%;
     right: $header-gutter;
-    transform: translateY(-50%);
     z-index: 10;
 }
 

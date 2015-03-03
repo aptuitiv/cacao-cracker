@@ -27,18 +27,22 @@ $header-state-nav-bp: $g-bp-md !default;
 \*---------------------------------------------------------------------------*/
 
 @media (max-width: $header-state-nav-bp) {
+
     .header_nav,
     .header_nav.-inline {
+        @include transform(none);
         display: none;
         position: static;
-        transform: none;
     }
+
     .header_top {
         position: relative;
     }
+
     .header_toggle {
         display: block;
     }
+
 }
 
 
