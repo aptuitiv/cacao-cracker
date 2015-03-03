@@ -44,9 +44,20 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= global.src %>/js',
-                    src: ['**/*.js'],
+                    src: ['**/*.js', '!**/init.js'],
                     dest: '<%= global.dest %>/layout/js'
                 }]
+            },
+            init: {
+                src: ['<%= global.src %>/js/init.js'],
+                dest: '.build/init.js'
+            }
+        },
+
+        concat: {
+            init: {
+                src: ['.build/**/*-init.js', '.build/js/init.js'],
+                dest: '<%= global.dest %>/layout/js/init.js'
             }
         },
 
@@ -130,7 +141,7 @@ module.exports = function(grunt) {
 
     // custom tasks
     grunt.registerTask('serve', ['connect', 'watch']);
-    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify', 'imagemin', 'htmlmin']);
+    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify', 'concat', 'imagemin', 'htmlmin']);
 
     // default task
     grunt.registerTask('default', ['build', 'serve']);
