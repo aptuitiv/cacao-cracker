@@ -30,7 +30,7 @@ $content-heading-space: 10px !default;
   LAYOUT
 \*---------------------------------------------------------------------------*/
 
-.content {
+.Content {
     padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
 }
@@ -42,7 +42,7 @@ $content-heading-space: 10px !default;
  * Allows other elements to be used between sections that will span the full
  * width.
  */
-.content_section {
+.Content-section {
     padding-left: $content-gutter;
     padding-right: $content-gutter;
 }
@@ -54,12 +54,12 @@ $content-heading-space: 10px !default;
  * These are bad selectors, but since we have no control over the classes of
  * headings inside rich text editor blocks this will have to do.
  */
-.content_section h1,
-.content_section .h1,
-.content_section h2,
-.content_section .h2,
-.content_section h3,
-.content_section .h3 {
+.Content-section h1,
+.Content-section .t-h1,
+.Content-section h2,
+.Content-section .t-h2,
+.Content-section h3,
+.Content-section .t-h3 {
     padding-top: $content-heading-space;
 }
 

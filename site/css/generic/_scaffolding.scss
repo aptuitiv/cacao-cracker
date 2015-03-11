@@ -5,7 +5,7 @@
 /**
  * Applied to elements to allow their heights to 'clear' or contain floats.
  */
-.clearfix {
+.u-cf {
     @include clearfix;
 }
 
@@ -15,23 +15,23 @@
  * Used to modify an elements bottom margin.
  * The various size modifiers follow the site's vertical rhythm. 
  */
-.spaced-xs {
+.u-margin1 {
     margin-bottom: $g-rhythm;
 }
 
-.spaced-sm {
+.u-margin2 {
     margin-bottom: $g-rhythm*2;
 }
 
-.spaced-md {
+.u-margin3 {
     margin-bottom: $g-rhythm*3;
 }
 
-.spaced-lg {
+.u-margin4 {
     margin-bottom: $g-rhythm*4;
 }
 
-.spaced-xl {
+.u-margin5 {
     margin-bottom: $g-rhythm*5;
 }
 
@@ -41,23 +41,23 @@
  * Used to add spacing to the inside of an element via padding.
  * This padding follows the site's vertical rhythm.
  */
-.padded-xs {
+.u-padding1 {
     padding-top: $g-rhythm;
 }
 
-.padded-sm {
+.u-padding2 {
     padding-top: $g-rhythm*2;
 }
 
-.padded-md {
+.u-padding3 {
     padding-top: $g-rhythm*3;
 }
 
-.padded-lg {
+.u-padding4 {
     padding-top: $g-rhythm*4;
 }
 
-.padded-xl {
+.u-padding5 {
     padding-top: $g-rhythm*5;
 }
 

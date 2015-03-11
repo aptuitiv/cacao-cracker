@@ -2,7 +2,7 @@
   HEADER THEME
 \*---------------------------------------------------------------------------*/
 
-#header {
+#Header {
     @include linear-gradient($t-dark-brown, darken($t-dark-brown, 5%));
     border-bottom: $t-header-border-width solid #333;
 }

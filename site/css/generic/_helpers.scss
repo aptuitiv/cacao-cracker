@@ -5,11 +5,11 @@
 /**
  * Floats
  */
-.l-left {
+.u-posLeft {
     float: left;
 }
 
-.l-right {
+.u-posRight {
     float: right;
 }
 
@@ -18,11 +18,11 @@
 /**
  * Margins & padding
  */
-.no-margin {
+.u-marginNone {
     margin: 0;
 }
 
-.no-padding {
+.u-paddingNone {
     padding: 0;
 }
 
@@ -34,14 +34,12 @@
   RESPONSIVE HELPERS
 \*---------------------------------------------------------------------------*/
 
-.img,
-%img {
+.u-img {
     max-width: 100%;
     height: auto;
 }
 
-.img-full {
-    @extend %img;
+.u-img--full {
     display: block;
     width: 100%;
 }

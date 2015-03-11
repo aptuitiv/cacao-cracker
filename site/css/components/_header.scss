@@ -36,12 +36,12 @@ $header-gutter: 15px !default;
   COMPONENT
 \*---------------------------------------------------------------------------*/
 
-.header {
+.Header {
     position: relative;
     padding-top: $header-padding-top;
 }
 
-.header_logo {
+.Header-logo {
     margin-left: $header-gutter;
     margin-right: $header-gutter;
     margin-bottom: $header-logo-margin;
@@ -49,11 +49,7 @@ $header-gutter: 15px !default;
 
 
 
-.header_nav {
-}
-
-.header_nav.-inline,
-.header_toggle {
+.Header-toggle {
     @include transform(translateY(-50%));
     position: absolute;
     top: 50%;
@@ -61,7 +57,7 @@ $header-gutter: 15px !default;
     z-index: 10;
 }
 
-.header_toggle {
+.Header-toggle {
     display: none;
     margin-top: $header-padding-top/2;
 }
