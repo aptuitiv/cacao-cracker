@@ -4,10 +4,16 @@ module.exports = function(grunt) {
 
         // Global build settings
         global: {
-            // Project source files 
-            src: 'site',
+            // Local modules
+            src: 'src',
             // Build destination
-            dest: 'dist'
+            dest: 'dist',
+            // main site module
+            site: '<%= global.src %>/site',
+            // bower components directory
+            bower: 'bower_components',
+            // cacao directory
+            cacao: '<%= global.bower %>/cacao'
         },
 
         sass: {
@@ -16,7 +22,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    '<%= global.dest %>/layout/css/main.css': '<%= global.src %>/css/main.scss'
+                    '<%= global.dest %>/layout/css/main.css': '<%= global.site %>/styles/index.scss'
                 }
             }
         },
@@ -25,9 +31,14 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/assets',
-                    src: ['**/*'],
+                    cwd: '<%= global.site %>/assets',
+                    src: ['**/*', '!**/README.md', '!**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>'
+                },{
+                    expand: true,
+                    cwd: '<%= global.site %>/assets',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '<%= global.dest %>/layout/images'
                 }]
             }
         },
@@ -39,34 +50,9 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/js',
+                    cwd: '<%= global.src %>/scripts',
                     src: ['**/*.js'],
                     dest: '<%= global.dest %>/layout/js'
-                }]
-            }
-        },
-
-        imagemin: {
-            site: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.src %>/images',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: '<%= global.dest %>/layout/images'
-                }]
-            }
-        },
-
-        htmlmin: {
-            options: {
-                collapseWhitespace: true
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.dest %>',
-                    src: ['**/*.html'],
-                    dest: '<%= global.dest %>'
                 }]
             }
         },
@@ -79,15 +65,15 @@ module.exports = function(grunt) {
                 }
             },
             sass: {
-                files: ['<%= global.src %>/css/**/*.scss'],
+                files: ['<%= global.site %>/styles/**/*.scss'],
                 tasks: ['sass']
             },
             js: {
-                files: ['<%= global.src %>/js/**/*.js'],
+                files: ['<%= global.site %>/scripts/**/*.js'],
                 tasks: ['uglify']
             },
             assets: {
-                files: ['<%= global.src %>/assets/**/*'],
+                files: ['<%= global.site %>/assets/**/*', '!<%= global.site %>/assets/**/README.md'],
                 tasks: ['copy:site', 'htmlmin:dist']
             }
         },
@@ -105,12 +91,12 @@ module.exports = function(grunt) {
 
 
     // cacao modules
-    require('./cacao/modules/jquery/Gruntfile.js')(grunt);
-    require('./cacao/modules/ddmenu/Gruntfile.js')(grunt);
-    require('./cacao/modules/magnific/Gruntfile.js')(grunt);
-    require('./cacao/modules/normalize/Gruntfile.js')(grunt);
-    require('./cacao/modules/slick/Gruntfile.js')(grunt);
-    require('./cacao/modules/slider/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/normalize/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/jquery/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/ddmenu/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/magnific/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/slider/Gruntfile.js')(grunt);
+    require('./bower_components/cacao/modules/slick/Gruntfile.js')(grunt);
 
 
     // npm tasks
@@ -120,13 +106,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
 
     // custom tasks
     grunt.registerTask('serve', ['connect', 'watch']);
-    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify', 'imagemin', 'htmlmin']);
+    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify']);
 
     // default task
     grunt.registerTask('default', ['build', 'serve']);

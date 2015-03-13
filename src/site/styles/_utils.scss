@@ -1,0 +1,110 @@
+/*---------------------------------------------------------------------------*\
+  UTILITIES
+\*---------------------------------------------------------------------------*/
+
+@import "../../../bower_components/cacao/cacao";
+
+
+
+/**
+ * Floats
+ */
+
+.u-posLeft {
+    float: left;
+}
+
+.u-posRight {
+    float: right;
+}
+
+/**
+ * Margins & padding
+ */
+
+.u-marginNone {
+    margin: 0;
+}
+
+.u-paddingNone {
+    padding: 0;
+}
+
+/**
+ * Applied to elements to allow their heights to 'clear' or contain floats.
+ */
+
+.u-cf {
+    @include clearfix;
+}
+
+/**
+ * Used to modify an elements bottom margin.
+ * The various size modifiers follow the site's vertical rhythm.
+ */
+
+.u-margin1 {
+    margin-bottom: $g-rhythm;
+}
+
+.u-margin2 {
+    margin-bottom: $g-rhythm*2;
+}
+
+.u-margin3 {
+    margin-bottom: $g-rhythm*3;
+}
+
+.u-margin4 {
+    margin-bottom: $g-rhythm*4;
+}
+
+.u-margin5 {
+    margin-bottom: $g-rhythm*5;
+}
+
+/**
+ * Used to add spacing to the inside of an element via padding.
+ * This padding follows the site's vertical rhythm.
+ */
+
+.u-padding1 {
+    padding-top: $g-rhythm;
+}
+
+.u-padding2 {
+    padding-top: $g-rhythm*2;
+}
+
+.u-padding3 {
+    padding-top: $g-rhythm*3;
+}
+
+.u-padding4 {
+    padding-top: $g-rhythm*4;
+}
+
+.u-padding5 {
+    padding-top: $g-rhythm*5;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  RESPONSIVE HELPERS
+\*---------------------------------------------------------------------------*/
+
+.u-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.u-img--full {
+    display: block;
+    width: 100%;
+}
+
+
+

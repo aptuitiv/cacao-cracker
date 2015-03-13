@@ -2,7 +2,7 @@
   SETTING OVERRIDES
 \*---------------------------------------------------------------------------*/
 /**
- * Global variables, layout settings, and module settings go here.
+ * Global variables, site settings, and module settings go here.
  */
 
 
@@ -10,7 +10,7 @@
 
 
 /*---------------------------------------------------------------------------*\
-  GLOBAL OVERRIDES
+  CACAO GLOBAL OVERRIDES
 \*---------------------------------------------------------------------------*/
 
 /**
@@ -18,7 +18,7 @@
  */
 $g-font-stack: "Open Sans", sans-serif;
 $g-font-size: 15px;
-$g-font-weight: normal;
+$g-font-weight: 400;
 $g-line-height: 22px;
 $g-letter-spacing: .15px;
 $g-rhythm: $g-line-height/2;
@@ -52,40 +52,41 @@ $g-bp-xs: 400px;
 
 
 
+
+
 /*---------------------------------------------------------------------------*\
-  LOCAL VARIABLES
+  SITE SETTINGS
 \*---------------------------------------------------------------------------*/
 /**
  * Used throughout this file to keep things consistent.
- * You may define your own here but don't use them anywhere else.
  */
 
 /**
- * Page variables (used below to configure layouts and modules)
+ * Page variables
  */
-$page-width: 960px;
-$page-gutter: $g-rhythm*2;
+$site-width: 960px;
+$site-gutter: $g-rhythm*2;
 
 
 
 
 
 /*---------------------------------------------------------------------------*\
-  COMPONENT SETTINGS
+  COMPONENT & MODULE SETTINGS
 \*---------------------------------------------------------------------------*/
 
 /**
  * Container
  */
-$container-width: $page-width;
-$container-gutter: $page-gutter;
+$container-width: $site-width;
+$container-gutter: $site-gutter;
 
 
 
 /**
  * Content
  */
-$content-gutter: $page-gutter;
+$content-gutter: $site-gutter;
 $content-padding-top: 0;
 $content-padding-bottom: $g-rhythm;
 $content-heading-space: $g-rhythm;
@@ -110,49 +111,22 @@ $grid-breakpoints: (
  * Header
  */
 $header-padding-top: $g-rhythm;
-$header-padding-bottom: $g-rhythm/2;
-$header-logo-margin: $g-rhythm;
+$header-logo-margin: $g-rhythm + $g-rhythm/2;
+$header-gutter: $site-gutter;
 
 
 
 /**
- * Media layout
+ * Main navigation
  */
-$media-gutter: $g-rhythm*2;
+$mainnav-root-display: inline-block;
 
 
 
 /**
- * Sidebar
+ * Drilldown menu
  */
-$sidebar-gutter: $page-gutter;
-$sidebar-padding-top: $g-rhythm*4;
-$sidebar-padding-bottom: $g-rhythm*2;
-
-
-
-/**
- * Breadcrumbs
- */
-$crumbs-wrapper-padding: ($g-rhythm/2)-1px .5em;
-$crumbs-crumb-padding: 0 .5em;
-$crumbs-separator-padding: $g-rhythm/2 .5em;
-
-
-
-/**
- * Slider
- */
-$slider-nav-gutter: 12px;
-
-$slider-pager-item-width: $g-rhythm;
-$slider-pager-item-height: $g-rhythm;
-$slider-pager-item-margin: 0 4px;
-
-$slider-bp: $g-bp-lg;
-$slider-nav-gutter-alt: 12px;
-
-$slider-bp-hidden: $g-bp-md;
+$ddmenu-classname: "mainnav";
 
 
 
@@ -167,23 +141,22 @@ $hero-subtitle-margin: 0;
 $hero-button-size: $g-gamma;
 $hero-button-padding: .2em .65em;
 
-$hero-bp-md: $g-bp-lg;
-$hero-title-size-md: $g-kilo;
-$hero-title-margin-md: 0;
-$hero-subtitle-size-md: $g-gamma;
-$hero-subtitle-margin-md: 0;
-$hero-button-size-md: $hero-subtitle-size-md;
-$hero-button-padding-md: $hero-button-padding;
+// state
+$hero-state-bp-hidden: $g-bp-md;
 
-$hero-bp-sm: $g-bp-sm;
-$hero-title-size-sm: 36px;
-$hero-title-margin-sm: 32px;
-$hero-subtitle-size-sm: 18px;
-$hero-subtitle-margin-sm: 48px;
-$hero-button-size-sm: $hero-subtitle-size-sm;
-$hero-button-padding-sm: $hero-button-padding;
 
-$hero-bp-hidden: $g-bp-md;
+
+/**
+ * Slider
+ */
+$slider-nav-gutter: 12px;
+
+$slider-pager-item-width: $g-rhythm;
+$slider-pager-item-height: $g-rhythm;
+$slider-pager-item-margin: 0 4px;
+
+// state
+$slider-bp-hidden: $g-bp-md;
 
 
 
