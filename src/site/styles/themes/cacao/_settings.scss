@@ -2,14 +2,16 @@
   THEME VARIABLES
 \*---------------------------------------------------------------------------*/
 
-@import "../../../../header/styles/settings";
+@import "../../../../cacao-header/styles/settings";
 
 
 
 /**
  * Colorscheme
  */
-$t-dark-brown: #604830;
+
+$t-cacao-brown: #604830;
+
 $t-light-brown: #c0a878;
 $t-off-white: #f0f0cf;
 
@@ -21,7 +23,8 @@ $t-deep-red: #481818;
 /**
  * Theme settings
  */
-$t-header-border-width: 1px;
+
+$t-cacao-header-border-width: 1px;
 
 
 
@@ -31,8 +34,12 @@ $t-header-border-width: 1px;
   SITE SETTING OVERRIDES
 \*---------------------------------------------------------------------------*/
 
+/**
+ * Example
+ */
+
 // remove border width from header margin (maintain vertical rhythm)
-$header-logo-margin: $header-logo-margin - $t-header-border-width;
+$header-logo-margin: $cacao-header-logo-margin - $t-cacao-header-border-width;
 
 
 

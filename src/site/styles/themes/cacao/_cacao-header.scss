@@ -1,0 +1,11 @@
+/*---------------------------------------------------------------------------*\
+  CACAO HEADER THEME
+\*---------------------------------------------------------------------------*/
+
+.Row--cacaoHeader {
+    @include linear-gradient($t-cacao-brown, darken($t-cacao-brown, 5%));
+    border-bottom: $t-cacao-header-border-width solid #333;
+}
+
+
+

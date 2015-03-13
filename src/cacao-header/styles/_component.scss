@@ -16,30 +16,30 @@
   COMPONENT
 \*---------------------------------------------------------------------------*/
 
-.Header {
+.cacao-Header {
     position: relative;
-    padding-top: $header-padding-top;
+    padding-top: $cacao-header-padding-top;
 }
 
-.Header-logo {
-    margin-left: $header-gutter;
-    margin-right: $header-gutter;
-    margin-bottom: $header-logo-margin;
+.cacao-Header-logo {
+    margin-left: $cacao-header-gutter;
+    margin-right: $cacao-header-gutter;
+    margin-bottom: $cacao-header-logo-margin;
 }
 
 
 
-.Header-toggle {
+.cacao-Header-toggle {
     @include transform(translateY(-50%));
     position: absolute;
     top: 50%;
-    right: $header-gutter;
+    right: $cacao-header-gutter;
     z-index: 10;
 }
 
-.Header-toggle {
+.cacao-Header-toggle {
     display: none;
-    margin-top: $header-padding-top/2;
+    margin-top: $cacao-header-padding-top/2;
 }
 
 

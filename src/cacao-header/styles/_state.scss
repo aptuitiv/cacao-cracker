@@ -16,20 +16,19 @@
   STATE
 \*---------------------------------------------------------------------------*/
 
-@media (max-width: $header-state-nav-bp) {
+@media (max-width: $cacao-header-state-nav-bp) {
 
-    .header_nav,
-    .header_nav.-inline {
+    .cacao-Header-nav {
         @include transform(none);
         display: none;
         position: static;
     }
 
-    .header_top {
+    .cacao-Header-top {
         position: relative;
     }
 
-    .header_toggle {
+    .cacao-Header-toggle {
         display: block;
     }
 
