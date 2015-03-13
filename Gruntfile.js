@@ -4,10 +4,12 @@ module.exports = function(grunt) {
 
         // Global build settings
         global: {
-            // Project source files 
-            src: 'site',
+            // Local modules
+            src: 'src',
             // Build destination
             dest: 'dist',
+            // main site module
+            site: '<%= global.src %>/site',
             // bower components directory
             bower: 'bower_components',
             // cacao directory
@@ -20,7 +22,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    '<%= global.dest %>/layout/css/main.css': '<%= global.src %>/css/main.scss'
+                    '<%= global.dest %>/layout/css/main.css': '<%= global.site %>/styles/index.scss'
                 }
             }
         },
@@ -29,8 +31,8 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/assets',
-                    src: ['**/*', '!**/README.md'],
+                    cwd: '<%= global.site %>/assets',
+                    src: ['**/*', '!**/README.md', '!**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>'
                 }]
             }
@@ -43,7 +45,7 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/js',
+                    cwd: '<%= global.src %>/scripts',
                     src: ['**/*.js'],
                     dest: '<%= global.dest %>/layout/js'
                 }]
@@ -54,7 +56,7 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/images',
+                    cwd: '<%= global.src %>/assets',
                     src: ['**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>/layout/images'
                 }]
@@ -83,16 +85,20 @@ module.exports = function(grunt) {
                 }
             },
             sass: {
-                files: ['<%= global.src %>/css/**/*.scss'],
+                files: ['<%= global.site %>/styles/**/*.scss'],
                 tasks: ['sass']
             },
             js: {
-                files: ['<%= global.src %>/js/**/*.js'],
+                files: ['<%= global.site %>/scripts/**/*.js'],
                 tasks: ['uglify']
             },
             assets: {
-                files: ['<%= global.src %>/assets/**/*', '!<%= global.src %>/assets/**/README.md'],
+                files: ['<%= global.site %>/assets/**/*', '!<%= global.site %>/assets/**/README.md', '!<%= global.site %>/assets/**/*.{png,jpg,gif}'],
                 tasks: ['copy:site', 'htmlmin:dist']
+            },
+            images: {
+                files: ['<%= global.site %>/assets/**/*.{png,jpg,gif}'],
+                tasks: ['imagemin:site']
             }
         },
 
