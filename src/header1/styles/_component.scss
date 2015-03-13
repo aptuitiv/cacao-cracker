@@ -1,0 +1,39 @@
+/*---------------------------------------------------------------------------*\
+  HEADER
+\*---------------------------------------------------------------------------*/
+/**
+ * Header layout.
+ */
+
+@import "../../../bower_components/cacao/cacao";
+@import "settings";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COMPONENT
+\*---------------------------------------------------------------------------*/
+
+.Header1 {
+    position: relative;
+    padding: $header1-padding;
+}
+
+.Header1-logo {
+    margin-left: $header1-gutter;
+    margin-right: $header1-gutter;
+}
+
+
+
+.Header1-content {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    right: $header1-gutter;
+    z-index: 10;
+}
+
+

@@ -1,0 +1,30 @@
+/*---------------------------------------------------------------------------*\
+  MAINNAV SETTINGS
+\*---------------------------------------------------------------------------*/
+
+@import "../../../bower_components/cacao/cacao";
+
+
+
+/**
+ * Font sizes
+ */
+
+$mainnav1-root-fontsize: $g-zeta;
+$mainnav1-sub-fontsize: $g-milli;
+
+/**
+ * Root menu defaults
+ */
+
+$mainnav1-root-item-spacing: 1em;
+$mainnav1-root-item-padding: 3px 6px;
+
+/**
+ * Sub menu defaults
+ */
+
+$mainnav1-sub-padding: 4px 0 0;
+$mainnav1-sub-item-spacing: 4px;
+$mainnav1-sub-item-padding: 4px 8px;
+

@@ -1,0 +1,18 @@
+/*---------------------------------------------------------------------------*\
+  MAINNAV THEME
+\*---------------------------------------------------------------------------*/
+
+.s-MainNav1 {
+    background: #222;
+    color: white;
+}
+
+.MainNav1--sub,
+.MainNav1-item--root:hover > .MainNav1-link {
+    background: #555;
+}
+
+.MainNav1-item--sub:hover > .MainNav1-link {
+    background: #222;
+}
+

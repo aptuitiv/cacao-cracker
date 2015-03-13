@@ -1,0 +1,52 @@
+/*---------------------------------------------------------------------------*\
+  MAIN NAV SETTINGS
+\*---------------------------------------------------------------------------*/
+
+@import "../../../bower_components/cacao/cacao";
+
+
+
+/**
+ * Root menu display value
+ * Set to inline-block if needed (text-align: center; the menu, etc...)
+ */
+$mainnav1-root-display: block !default;
+
+
+
+/**
+ * Font sizes
+ */
+$mainnav1-root-fontsize: $g-epsilon !default;
+$mainnav1-sub-fontsize: $g-zeta !default;
+
+
+
+/**
+ * Root menu defaults
+ */
+$mainnav1-root-item-width: auto !default;
+$mainnav1-root-item-spacing: 16px !default;
+$mainnav1-root-item-padding: 4px 8px !default;
+
+
+
+/**
+ * Sub menu defaults
+ */
+$mainnav1-sub-padding: 4px 0 0 !default;
+$mainnav1-sub-item-spacing: 4px !default;
+$mainnav1-sub-item-padding: $mainnav1-root-item-padding !default;
+$mainnav1-sub-zindex: 10 !default;
+
+
+
+/**
+ * Sub-sub Menu defaults
+ * 1. Vertically align the sub-sub-menu with its parent item.
+ *    Apply a negative top value equal to the sub-menus top padding.
+ */
+$mainnav1-sub-sub-offset: -(nth($mainnav1-sub-padding, 1)) !default; /* 1 */
+
+
+

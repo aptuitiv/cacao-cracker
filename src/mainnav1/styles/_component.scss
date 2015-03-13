@@ -1,0 +1,102 @@
+/*---------------------------------------------------------------------------*\
+  MAIN NAVIGATION
+\*---------------------------------------------------------------------------*/
+
+@import "../../../bower_components/cacao/cacao";
+@import "settings";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COMPONENT
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Base menu
+ */
+.MainNav1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+// root menu
+.MainNav1--root {
+    display: $mainnav1-root-display;
+    margin-left: -$mainnav1-root-item-spacing;
+}
+
+// sub menus
+.MainNav1--sub {
+    display: none;
+    position: absolute;
+    z-index: $mainnav1-sub-zindex;
+    min-width: 100%;
+    padding: $mainnav1-sub-padding;
+}
+
+
+
+/**
+ * Menu items
+ */
+.MainNav1-item {
+    position: relative;
+
+    // display the submenu when it's parent is hovered
+    &:hover > .MainNav1--sub {
+        display: block;
+    }
+}
+
+// Root level items
+.MainNav1-item--root {
+    display: inline-block;
+    width: $mainnav1-root-item-width;
+    margin-left: $mainnav1-root-item-spacing;
+
+    // Position sub-menus to the bottom of their parent
+    &:hover > .MainNav1--sub {
+        top: 100%;
+        left: 0;
+    }
+}
+
+// Sub menu items
+.MainNav1-item--sub {
+    width: 100%;
+    margin-bottom: $mainnav1-sub-item-spacing;
+
+    // Position sub-sub-menus to the right side of the parent
+    // 1. Apply an optional vertical offset to negate borders, padding, etc.
+    &:hover > .MainNav1--sub {
+        top: $mainnav1-sub-sub-offset; /* 1 */
+        left: 100%;
+    }
+}
+
+
+
+/**
+ * Menu links
+ */
+.MainNav1-link {
+    display: block;
+}
+
+// Root level links
+.MainNav1-link--root {
+    @include font-size($mainnav1-root-fontsize, $line-height: true);
+    padding: $mainnav1-root-item-padding;
+}
+
+// Sub menu links
+.MainNav1-link--sub {
+    @include font-size($mainnav1-sub-fontsize, $line-height: true);
+    padding: $mainnav1-sub-item-padding;
+}
+
+
