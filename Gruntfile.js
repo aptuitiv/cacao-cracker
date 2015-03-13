@@ -52,31 +52,6 @@ module.exports = function(grunt) {
             }
         },
 
-        imagemin: {
-            site: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.src %>/assets',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: '<%= global.dest %>/layout/images'
-                }]
-            }
-        },
-
-        htmlmin: {
-            options: {
-                collapseWhitespace: true
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.dest %>',
-                    src: ['**/*.html'],
-                    dest: '<%= global.dest %>'
-                }]
-            }
-        },
-
         watch: {
             config: {
                 files: ['Gruntfile.js'],
@@ -93,12 +68,8 @@ module.exports = function(grunt) {
                 tasks: ['uglify']
             },
             assets: {
-                files: ['<%= global.site %>/assets/**/*', '!<%= global.site %>/assets/**/README.md', '!<%= global.site %>/assets/**/*.{png,jpg,gif}'],
+                files: ['<%= global.site %>/assets/**/*', '!<%= global.site %>/assets/**/README.md'],
                 tasks: ['copy:site', 'htmlmin:dist']
-            },
-            images: {
-                files: ['<%= global.site %>/assets/**/*.{png,jpg,gif}'],
-                tasks: ['imagemin:site']
             }
         },
 
@@ -130,13 +101,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
 
     // custom tasks
     grunt.registerTask('serve', ['connect', 'watch']);
-    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify', 'imagemin', 'htmlmin']);
+    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify']);
 
     // default task
     grunt.registerTask('default', ['build', 'serve']);
