@@ -34,6 +34,11 @@ module.exports = function(grunt) {
                     cwd: '<%= global.site %>/assets',
                     src: ['**/*', '!**/README.md', '!**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>'
+                },{
+                    expand: true,
+                    cwd: '<%= global.site %>/assets',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '<%= global.dest %>/images'
                 }]
             }
         },
