@@ -1,0 +1,23 @@
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Base header padding
+ */
+$header-padding-top: 10px !default;
+
+/**
+ * Bottom margin of the header logo section
+ */
+$header-logo-margin: 15px !default;
+
+/**
+ * Side margins
+ */
+$header-gutter: 15px !default;
+
+/**
+ * Breakpoint to hide navigation
+ */
+$header-state-nav-bp: $g-bp-md !default;

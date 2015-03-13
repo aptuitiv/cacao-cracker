@@ -5,22 +5,7 @@
  * Content layout. This is usually placed inside the main column.
  */
 
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
-
-$content-gutter: 20px !default;
-$content-padding-top: 30px !default;
-$content-padding-bottom: 10px !default;
-
-/**
- * Extra spacing to add to large headings in a content_section.
- */
-$content-heading-space: 10px !default;
+@import "settings";
 
 
 

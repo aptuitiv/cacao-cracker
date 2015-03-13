@@ -20,7 +20,7 @@
  * Base
  */
 @import "../../../bower_components/normalize.css/normalize"; // cacao/modules/normalize
-@import "base/base";
+@import "base";
 @import "../../../bower_components/cacao/modules/type/styles/base";
 
 
@@ -34,8 +34,7 @@
 @import "../../../bower_components/cacao/modules/utils-offset-before/styles/generic";
 @import "../../../bower_components/cacao/modules/utils-order-push/styles/generic";
 @import "../../../bower_components/cacao/modules/utils-order-pull/styles/generic";
-@import "generic/helpers";
-@import "generic/scaffolding";
+@import "utils";
 
 
 
@@ -54,8 +53,8 @@
 @import "../../../bower_components/cacao/modules/container/styles/component";
 //@import "../../../bower_components/cacao/modules/mainnav/styles/component";
 //@import "../../../bower_components/cacao/modules/ddmenu/styles/component";
-@import "components/content";
-@import "components/header";
+@import "../../content/styles/component";
+@import "../../header/styles/component";
 
 
 
@@ -71,7 +70,7 @@
 @import "../../../bower_components/cacao/modules/utils-offset-before/styles/state";
 @import "../../../bower_components/cacao/modules/utils-order-push/styles/state";
 @import "../../../bower_components/cacao/modules/utils-order-pull/styles/state";
-@import "state/header";
+@import "../../header/styles/state";
 
 
 

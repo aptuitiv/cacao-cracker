@@ -5,28 +5,8 @@
  * Header layout.
  */
 
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
-
-/**
- * Base header padding
- */
-$header-padding-top: 10px !default;
-
-/**
- * Bottom margin of the header logo section
- */
-$header-logo-margin: 15px !default;
-
-/**
- * Side margins
- */
-$header-gutter: 15px !default;
+@import "../../../bower_components/cacao/cacao";
+@import "settings";
 
 
 

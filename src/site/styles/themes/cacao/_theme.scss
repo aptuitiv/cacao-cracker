@@ -3,17 +3,17 @@
 \*---------------------------------------------------------------------------*/
 
 // base element themes
-@import "base/base";
+@import "base";
 
 // generic theme classes
 //@import "generic/generic";
 
 // components
-@import "components/container";
-@import "components/header";
-@import "components/hero";
-@import "components/logo";
-@import "components/slider";
+@import "container";
+@import "header";
+@import "hero";
+@import "logo";
+@import "slider";
 
 // theme states
 //@import "state/state";

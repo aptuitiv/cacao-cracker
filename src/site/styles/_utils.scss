@@ -1,20 +1,48 @@
 /*---------------------------------------------------------------------------*\
-  GENERIC LAYOUT CLASSES
+  UTILITIES
 \*---------------------------------------------------------------------------*/
+
+@import "../../../bower_components/cacao/cacao";
+
+
+
+/**
+ * Floats
+ */
+
+.u-posLeft {
+    float: left;
+}
+
+.u-posRight {
+    float: right;
+}
+
+/**
+ * Margins & padding
+ */
+
+.u-marginNone {
+    margin: 0;
+}
+
+.u-paddingNone {
+    padding: 0;
+}
 
 /**
  * Applied to elements to allow their heights to 'clear' or contain floats.
  */
+
 .u-cf {
     @include clearfix;
 }
 
-
-
 /**
  * Used to modify an elements bottom margin.
- * The various size modifiers follow the site's vertical rhythm. 
+ * The various size modifiers follow the site's vertical rhythm.
  */
+
 .u-margin1 {
     margin-bottom: $g-rhythm;
 }
@@ -35,12 +63,11 @@
     margin-bottom: $g-rhythm*5;
 }
 
-
-
 /**
  * Used to add spacing to the inside of an element via padding.
  * This padding follows the site's vertical rhythm.
  */
+
 .u-padding1 {
     padding-top: $g-rhythm;
 }
@@ -59,6 +86,24 @@
 
 .u-padding5 {
     padding-top: $g-rhythm*5;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  RESPONSIVE HELPERS
+\*---------------------------------------------------------------------------*/
+
+.u-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.u-img--full {
+    display: block;
+    width: 100%;
 }
 
 
