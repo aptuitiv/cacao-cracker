@@ -1,39 +1,37 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   HEADER
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
+
 /**
  * Header layout.
  */
 
-@import "../../../bower_components/cacao/cacao";
-@import "settings";
+@import "defaults";
 
 
 
 
 
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   COMPONENT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 .Header {
-    position: relative;
     padding-top: $header-padding-top;
+    position: relative;
 }
 
 .Header-logo {
+    margin-bottom: $header-logo-margin;
     margin-left: $header-gutter;
     margin-right: $header-gutter;
-    margin-bottom: $header-logo-margin;
 }
 
-
-
 .Header-toggle {
-    @include transform(translateY(-50%));
     position: absolute;
-    top: 50%;
     right: $header-gutter;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
 }
 
@@ -41,6 +39,4 @@
     display: none;
     margin-top: $header-padding-top/2;
 }
-
-
 

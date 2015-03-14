@@ -1,44 +1,43 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   CONTENT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
+
 /**
  * Content layout. This is usually placed inside the main column.
  */
 
-@import "settings";
+@import "defaults";
 
 
 
 
 
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   LAYOUT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 .Content {
-    padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
+    padding-top: $content-padding-top;
 }
-
-
 
 /**
  * Section of the content area. Provides gutters.
  * Allows other elements to be used between sections that will span the full
  * width.
  */
+
 .Content-section {
     padding-left: $content-gutter;
     padding-right: $content-gutter;
 }
-
-
 
 /**
  * Large headings in the content section.
  * These are bad selectors, but since we have no control over the classes of
  * headings inside rich text editor blocks this will have to do.
  */
+
 .Content-section h1,
 .Content-section .t-h1,
 .Content-section h2,
@@ -47,6 +46,4 @@
 .Content-section .t-h3 {
     padding-top: $content-heading-space;
 }
-
-
 
