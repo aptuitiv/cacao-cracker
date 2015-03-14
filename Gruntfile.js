@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/scripts',
+                    cwd: '<%= global.site %>/scripts',
                     src: ['**/*.js'],
                     dest: '<%= global.dest %>/layout/js'
                 }]
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             },
             assets: {
                 files: ['<%= global.site %>/assets/**/*', '!<%= global.site %>/assets/**/README.md'],
-                tasks: ['copy:site', 'htmlmin:dist']
+                tasks: ['copy:site']
             }
         },
 
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
             site: {
                 options: {
                     port: '8080',
-                    base: 'dist'
+                    base: '<%= global.dest %>'
                 }
             }
         }
