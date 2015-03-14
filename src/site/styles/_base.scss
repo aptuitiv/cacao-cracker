@@ -2,10 +2,6 @@
   BASE ELEMENT STYLES
 \*===========================================================================*/
 
-@import "../../../bower_components/cacao/cacao";
-
-
-
 /**
  * Global box-sizing
  *
@@ -13,13 +9,13 @@
  */
 
 html {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    @include box-sizing(inherit);
+    box-sizing: inherit;
 }
 
 /**

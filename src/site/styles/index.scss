@@ -1,83 +1,63 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   MAIN STYLESHEET
-\*---------------------------------------------------------------------------*/
-
-
+\*===========================================================================*/
 
 /**
- * Globals 
+ * Globals
+ * 1. Cacao globals, defaults, and mixins
+ * 2. Site settings.
+ * 3. Theme settings and overrides
  */
-// cacao globals, defaults, and mixins
-@import "../../../bower_components/cacao/cacao";
-// site settings
-@import "settings";
-// theme settings and overrides
-@import "themes/cacao/settings";
 
-
+@import "../../../bower_components/cacao/cacao"; /* 1 */
+@import "settings"; /* 2 */
+@import "themes/cacao/settings"; /* 3 */
 
 /**
- * Base
+ * Bower modules
  */
-@import "../../../bower_components/normalize.css/normalize"; // cacao/modules/normalize
+
+@import "../../../bower_components/normalize.css/normalize";
+@import "../../../bower_components/magnific-popup/src/css/main";
+
+/**
+ * Cacao modules
+ */
+
+@import "../../../bower_components/cacao/modules/breadcrumbs/styles/index";
+@import "../../../bower_components/cacao/modules/container/styles/index";
+@import "../../../bower_components/cacao/modules/ddmenu/styles/index";
+@import "../../../bower_components/cacao/modules/grid-suitcss/styles/index";
+@import "../../../bower_components/cacao/modules/hero/styles/index";
+@import "../../../bower_components/cacao/modules/lists/styles/index";
+@import "../../../bower_components/cacao/modules/mainnav/styles/index";
+@import "../../../bower_components/cacao/modules/media/styles/index";
+@import "../../../bower_components/cacao/modules/pagination/styles/index";
+@import "../../../bower_components/cacao/modules/slider/styles/index";
+@import "../../../bower_components/cacao/modules/type/styles/index";
+@import "../../../bower_components/cacao/modules/utils-offset-after/styles/index";
+@import "../../../bower_components/cacao/modules/utils-offset-before/styles/index";
+@import "../../../bower_components/cacao/modules/utils-order-push/styles/index";
+@import "../../../bower_components/cacao/modules/utils-order-pull/styles/index";
+@import "../../../bower_components/cacao/modules/utils-size/styles/index";
+
+/**
+ * Project
+ */
+
+@import "../../content/styles/index";
+@import "../../header/styles/index";
+
+/**
+ * Site
+ */
+
 @import "base";
-@import "../../../bower_components/cacao/modules/type/styles/base";
-
-
-
-/**
- * Generic
- */
-@import "../../../bower_components/cacao/modules/type/styles/generic";
-@import "../../../bower_components/cacao/modules/utils-size/styles/generic";
-@import "../../../bower_components/cacao/modules/utils-offset-after/styles/generic";
-@import "../../../bower_components/cacao/modules/utils-offset-before/styles/generic";
-@import "../../../bower_components/cacao/modules/utils-order-push/styles/generic";
-@import "../../../bower_components/cacao/modules/utils-order-pull/styles/generic";
 @import "utils";
-
-
-
-/**
- * Components
- */
-@import "../../../bower_components/magnific-popup/src/css/main"; // cacao/modules/magnific
-@import "../../../bower_components/cacao/modules/hero/styles/component";
-//@import "../../../bower_components/cacao/modules/breadcrumbs/styles/component";
-//@import "../../../bower_components/cacao/modules/pagination/styles/component";
-@import "../../../bower_components/cacao/modules/slider/styles/component";
-//@import "../../../bower_components/cacao/modules/grid/styles/component";
-@import "../../../bower_components/cacao/modules/grid-suitcss/styles/component";
-//@import "../../../bower_components/cacao/modules/media/styles/component";
-//@import "../../../bower_components/cacao/modules/lists/styles/component";
-@import "../../../bower_components/cacao/modules/container/styles/component";
-//@import "../../../bower_components/cacao/modules/mainnav/styles/component";
-//@import "../../../bower_components/cacao/modules/ddmenu/styles/component";
-@import "../../content/styles/component";
-@import "../../header/styles/component";
-
-
-
-/**
- * State
- */
-@import "../../../bower_components/cacao/modules/hero/styles/state";
-@import "../../../bower_components/cacao/modules/slider/styles/state";
-//@import "../../../bower_components/cacao/modules/ddmenu/styles/state";
-//@import "../../../bower_components/cacao/modules/grid/styles/state";
-@import "../../../bower_components/cacao/modules/utils-size/styles/state";
-@import "../../../bower_components/cacao/modules/utils-offset-after/styles/state";
-@import "../../../bower_components/cacao/modules/utils-offset-before/styles/state";
-@import "../../../bower_components/cacao/modules/utils-order-push/styles/state";
-@import "../../../bower_components/cacao/modules/utils-order-pull/styles/state";
-@import "../../header/styles/state";
-
-
 
 /**
  * Theme
  */
-@import "themes/cacao/theme";
 
-
+@import "themes/cacao/index";
 

@@ -1,22 +1,20 @@
-/*---------------------------------------------------------------------------*\
-  THEME INDEX
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  GENERIC THEME CLASSES
+\*===========================================================================*/
 
-// base element themes
-@import "base";
-
-// generic theme classes
-//@import "generic/generic";
-
-// components
-@import "container";
-@import "header";
-@import "hero";
-@import "logo";
-@import "slider";
-
-// theme states
-//@import "state/state";
+@import "../../../../../bower_components/cacao/cacao";
+@import "settings";
 
 
+
+.t-page {
+    background: white;
+    border: 1px solid #dfdfdf;
+    border-top: 0;
+}
+
+.t-header {
+    @include cacao-linear-gradient($t-dark-brown, darken($t-dark-brown, 5%));
+    border-bottom: $t-header-border-width solid #333;
+}
 
