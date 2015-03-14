@@ -11,11 +11,11 @@
  */
 
 .u-posLeft {
-    float: left;
+    float: left !important;
 }
 
 .u-posRight {
-    float: right;
+    float: right !important;
 }
 
 /**
@@ -23,11 +23,11 @@
  */
 
 .u-marginNone {
-    margin: 0;
+    margin: 0 !important;
 }
 
 .u-paddingNone {
-    padding: 0;
+    padding: 0 !important;
 }
 
 /**
@@ -44,23 +44,23 @@
  */
 
 .u-margin1 {
-    margin-bottom: $g-rhythm;
+    margin-bottom: $g-rhythm !important;
 }
 
 .u-margin2 {
-    margin-bottom: $g-rhythm*2;
+    margin-bottom: $g-rhythm*2 !important;
 }
 
 .u-margin3 {
-    margin-bottom: $g-rhythm*3;
+    margin-bottom: $g-rhythm*3 !important;
 }
 
 .u-margin4 {
-    margin-bottom: $g-rhythm*4;
+    margin-bottom: $g-rhythm*4 !important;
 }
 
 .u-margin5 {
-    margin-bottom: $g-rhythm*5;
+    margin-bottom: $g-rhythm*5 !important;
 }
 
 /**
@@ -69,23 +69,23 @@
  */
 
 .u-padding1 {
-    padding-top: $g-rhythm;
+    padding-top: $g-rhythm !important;
 }
 
 .u-padding2 {
-    padding-top: $g-rhythm*2;
+    padding-top: $g-rhythm*2 !important;
 }
 
 .u-padding3 {
-    padding-top: $g-rhythm*3;
+    padding-top: $g-rhythm*3 !important;
 }
 
 .u-padding4 {
-    padding-top: $g-rhythm*4;
+    padding-top: $g-rhythm*4 !important;
 }
 
 .u-padding5 {
-    padding-top: $g-rhythm*5;
+    padding-top: $g-rhythm*5 !important;
 }
 
 
