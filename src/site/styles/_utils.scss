@@ -2,13 +2,20 @@
   UTILITIES
 \*===========================================================================*/
 
+/**
+ * CONTENTS
+ * - Floats
+ * - Gutters
+ * - Margins & Padding
+ * - Responsive Helpers
+ */
+
 @import "../../../bower_components/cacao/cacao";
 
 
 
-/**
- * Floats
- */
+/* Floats
+  -------------------------------------------------------------------------- */
 
 .u-posLeft {
     float: left !important;
@@ -19,18 +26,7 @@
 }
 
 /**
- * Margins & padding
- */
-
-.u-marginNone {
-    margin: 0 !important;
-}
-
-.u-paddingNone {
-    padding: 0 !important;
-}
-
-/**
+ * Clearfix.
  * Applied to elements to allow their heights to 'clear' or contain floats.
  */
 
@@ -38,68 +34,60 @@
     @include cacao-clearfix;
 }
 
+
+
+/* Gutters
+  -------------------------------------------------------------------------- */
+
+.u-gutters0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.u-gutters1 {
+    padding-left: $g-rhythm*1 !important;
+    padding-right: $g-rhythm*1 !important;
+}
+
+.u-gutters2 {
+    padding-left: $g-rhythm*2 !important;
+    padding-right: $g-rhythm*2 !important;
+}
+
+
+
+/* Margins & padding
+  -------------------------------------------------------------------------- */
+
+.u-margNone {
+    margin: 0 !important;
+}
+
+.u-padNone {
+    padding: 0 !important;
+}
+
+
+
+
+
+/* Responsive Helpers
+  -------------------------------------------------------------------------- */
+
 /**
- * Used to modify an elements bottom margin.
- * The various size modifiers follow the site's vertical rhythm.
+ * Make an image shrink to the width of it's containing element if the element
+ * is smaller than the image's original width.
  */
-
-.u-margin1 {
-    margin-bottom: $g-rhythm !important;
-}
-
-.u-margin2 {
-    margin-bottom: $g-rhythm*2 !important;
-}
-
-.u-margin3 {
-    margin-bottom: $g-rhythm*3 !important;
-}
-
-.u-margin4 {
-    margin-bottom: $g-rhythm*4 !important;
-}
-
-.u-margin5 {
-    margin-bottom: $g-rhythm*5 !important;
-}
-
-/**
- * Used to add spacing to the inside of an element via padding.
- * This padding follows the site's vertical rhythm.
- */
-
-.u-padding1 {
-    padding-top: $g-rhythm !important;
-}
-
-.u-padding2 {
-    padding-top: $g-rhythm*2 !important;
-}
-
-.u-padding3 {
-    padding-top: $g-rhythm*3 !important;
-}
-
-.u-padding4 {
-    padding-top: $g-rhythm*4 !important;
-}
-
-.u-padding5 {
-    padding-top: $g-rhythm*5 !important;
-}
-
-
-
-
-
-/*===========================================================================*\
-  RESPONSIVE HELPERS
-\*===========================================================================*/
 
 .u-img {
     max-width: 100%;
     height: auto;
 }
+
+/**
+ * Make an image scale to the width of it's containing element regardless of
+ * the image's original width.
+ */
 
 .u-img--full {
     display: block;
