@@ -3,7 +3,15 @@
 \*===========================================================================*/
 
 /**
- * Globals
+ * CONTENTS
+ * - Bower Modules
+ * - Cacao Modules
+ * - Project Modules
+ * - Site Module
+ */
+
+/**
+ * Globals and settings.
  * 1. Cacao globals, defaults, and mixins
  * 2. Site settings.
  * 3. Theme settings and overrides
@@ -13,21 +21,23 @@
 @import "settings"; /* 2 */
 @import "themes/cacao/settings"; /* 3 */
 
-/**
- * Bower modules
- */
+
+
+/* Bower Modules
+  -------------------------------------------------------------------------- */
 
 @import "../../../bower_components/normalize.css/normalize";
 @import "../../../bower_components/magnific-popup/src/css/main";
 
-/**
- * Cacao modules
- */
+
+
+/* Cacao Modules
+  -------------------------------------------------------------------------- */
 
 @import "../../../bower_components/cacao/modules/breadcrumbs/styles/index";
 @import "../../../bower_components/cacao/modules/container/styles/index";
 @import "../../../bower_components/cacao/modules/ddmenu/styles/index";
-@import "../../../bower_components/cacao/modules/grid-suitcss/styles/index";
+@import "../../../bower_components/cacao/modules/grid/styles/index";
 @import "../../../bower_components/cacao/modules/hero/styles/index";
 @import "../../../bower_components/cacao/modules/lists/styles/index";
 @import "../../../bower_components/cacao/modules/mainnav/styles/index";
@@ -35,22 +45,31 @@
 @import "../../../bower_components/cacao/modules/pagination/styles/index";
 @import "../../../bower_components/cacao/modules/slider/styles/index";
 @import "../../../bower_components/cacao/modules/type/styles/index";
-@import "../../../bower_components/cacao/modules/utils-offset-after/styles/index";
-@import "../../../bower_components/cacao/modules/utils-offset-before/styles/index";
-@import "../../../bower_components/cacao/modules/utils-order-push/styles/index";
-@import "../../../bower_components/cacao/modules/utils-order-pull/styles/index";
-@import "../../../bower_components/cacao/modules/utils-size/styles/index";
+@import "../../../bower_components/cacao/modules/offset-after/styles/index";
+@import "../../../bower_components/cacao/modules/offset-before/styles/index";
+@import "../../../bower_components/cacao/modules/order-push/styles/index";
+@import "../../../bower_components/cacao/modules/order-pull/styles/index";
+@import "../../../bower_components/cacao/modules/size/styles/index";
 
 /**
- * Project
+ * Example of only using a module's utility styles.
  */
+
+@import "../../../bower_components/cacao/modules/padding-top/styles/utils";
+@import "../../../bower_components/cacao/modules/margin-bottom/styles/utils";
+
+
+
+/* Project Modules
+  -------------------------------------------------------------------------- */
 
 @import "../../content/styles/index";
 @import "../../header/styles/index";
 
-/**
- * Site
- */
+
+
+/* Site Module
+  -------------------------------------------------------------------------- */
 
 @import "base";
 @import "utils";

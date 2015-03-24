@@ -3,6 +3,13 @@
 \*===========================================================================*/
 
 /**
+ * CONTENTS
+ * - Global Cacao Overrides
+ * - Site Settings
+ * - Component & Module Settings
+ */
+
+/**
  * Global variables, site settings, and module settings go here.
  */
 
@@ -70,18 +77,11 @@ $g-textSize1: 11px;
 
 
 
+/* Page
+  -------------------------------------------------------------------------- */
 
-
-/*===========================================================================*\
-  SITE SETTINGS
-\*===========================================================================*/
-
-/**
- * Used throughout this file to keep things consistent.
- */
-
-$site-width: 960px;
-$site-gutter: $g-rhythm*2;
+$g-page-width: 960px;
+$g-page-gutter: $g-rhythm*2;
 
 
 
@@ -95,14 +95,14 @@ $site-gutter: $g-rhythm*2;
  * Container
  */
 
-$container-width: $site-width;
-$container-gutter: $site-gutter;
+$container-width: $g-page-width;
+$container-gutter: $g-page-gutter;
 
 /**
  * Content
  */
 
-$content-gutter: $site-gutter;
+$content-gutter: $g-page-gutter;
 $content-padding-top: 0;
 $content-padding-bottom: $g-rhythm;
 $content-heading-space: $g-rhythm;
@@ -111,7 +111,7 @@ $content-heading-space: $g-rhythm;
  * Grid
  */
 
-$suitGrid-gutter-size: $site-gutter;
+$grid-gutter-size: $g-page-gutter;
 
 /**
  * Header
@@ -119,7 +119,7 @@ $suitGrid-gutter-size: $site-gutter;
 
 $header-padding-top: $g-rhythm;
 $header-logo-margin: $g-rhythm + $g-rhythm/2;
-$header-gutter: $site-gutter;
+$header-gutter: $g-page-gutter;
 
 /**
  * Main navigation
