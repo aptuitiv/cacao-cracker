@@ -1,9 +1,2 @@
-node_modules
-bower_components
-dist
-.grunt
-.sass-cache
-.ftppass
-*~
-*.swp
-*.test.html
+node_modules/
+dist/
