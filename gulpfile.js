@@ -14,7 +14,6 @@ var gulpPostcss = require('gulp-postcss');
 var gulpRemember = require('gulp-remember');
 var gulpSequence = require('gulp-sequence');
 var gulpUglify = require('gulp-uglify');
-var gulpWatch = require('gulp-watch');
 var mergeStream = require('merge-stream');
 var requireGlob = require('require-glob');
 
@@ -169,24 +168,24 @@ gulp.task('watch', function() {
   }
   // copy static assets
   var staticFiles = config.copy.reduce(flatten, []);
-  gulpWatch(staticFiles, watchOpts, gulpBatch(function(e, cb) {
+  gulp.watch(staticFiles, watchOpts, gulpBatch(function(e, cb) {
     gulp.start('copy', cb);
   }));
   // images
-  gulpWatch(config.images.src, watchOpts, gulpBatch(function(e, cb) {
+  gulp.watch(config.images.src, watchOpts, gulpBatch(function(e, cb) {
     gulp.start('images', cb);
   }));
   // nunjucks
-  gulpWatch(config.nunjucks.watch, watchOpts, gulpBatch(function(e, cb) {
+  gulp.watch(config.nunjucks.watch, watchOpts, gulpBatch(function(e, cb) {
     gulp.start('nunjucks', cb);
   }));
   // scripts
   var scriptFiles = config.scripts.reduce(flatten, []);
-  gulpWatch(scriptFiles, watchOpts, gulpBatch(function(e, cb) {
+  gulp.watch(scriptFiles, watchOpts, gulpBatch(function(e, cb) {
     gulp.start('scripts', cb);
   }));
   // styles
-  gulpWatch(config.styles.watch, watchOpts, gulpBatch(function(e, cb) {
+  gulp.watch(config.styles.watch, watchOpts, gulpBatch(function(e, cb) {
     gulp.start(['stylelint', 'styles'], cb);
   }));
 });
