@@ -1,5 +1,4 @@
 var config = require('./config');
-var del = require('del');
 var gulp = require('gulp');
 var gulpBatch = require('gulp-batch');
 var gulpCached = require('gulp-cached');
@@ -191,14 +190,6 @@ gulp.task('watch', function() {
 });
 
 /**
- * Clean build output
- */
-
-gulp.task('clean', function() {
-  return del([config.root.dest]);
-});
-
-/**
  * Simple web server
  */
 
@@ -215,10 +206,10 @@ var buildTasks = [
 ];
 
 gulp.task('build', function(cb) {
-  gulpSequence('clean', buildTasks, cb);
+  gulpSequence(buildTasks, cb);
 });
 
 gulp.task('default', function(cb) {
-  gulpSequence('clean', buildTasks, 'watch', 'connect', cb);
+  gulpSequence(buildTasks, 'watch', 'connect', cb);
 });
 
