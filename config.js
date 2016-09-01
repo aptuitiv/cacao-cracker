@@ -13,10 +13,6 @@ module.exports = {
 
   copy: [
     {
-      dest: destDir + '/layout/font-awesome/fonts',
-      src: ['node_modules/font-awesome/fonts/**/*']
-    },
-    {
       dest: destDir + '/layout/magnific',
       src: ['node_modules/magnific-popup/dist/**/*']
     },
