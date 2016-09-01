@@ -21,6 +21,10 @@ Once these are installed, clone the repository or download an archive.
 Navigate to the project directory and install local project dependencies
 with `npm install`. You can now build the project.
 
+### Integrating Cacao
+
+Download [Cacao](https://github.com/aptuitiv/cacao) and include the files in the src/styles directory. 
+Overwrite the index.css file.
 
 ## Building
 
@@ -84,3 +88,6 @@ Images are minified and output into the build directory.
 
 Other assets can be copied to the build directory with the `copy` task.
 
+## Updating packages
+
+Use [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) to periodically check for package updates and update the package.json file. 
